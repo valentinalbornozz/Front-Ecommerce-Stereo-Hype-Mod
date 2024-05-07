@@ -1,0 +1,10 @@
+/* Agrega estas reglas CSS a tu hoja de estilos (puede ser en un archivo .css separado o en línea dentro del componente) */
+.menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; /* Agrega una transición suave */
+}
+
+.menu-container.open {
+  max-height: 500px; /* Cambia esto según sea necesario para mostrar todo el contenido del menú */
+}

@@ -1,0 +1,95 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .slide-image {
+    height: inherit;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 20%;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.control-btn {
+  background-color: #030303;
+  color: white;
+  font-size: 14px;
+  line-height: 19.25px;
+  padding: 10px 15px;
+  margin: 0px 1px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-indicator,
+.shop-btn {
+  align-items: center;
+  color: white;
+  background-color: #030303;
+  display: flex;
+  font-size: 1.42857em;
+  justify-content: center;
+  line-height: 14.5px;
+  margin: 0px 1px 0px 0px;
+  padding: 10px;
+  text-align: center;
+}
+.slide-indicator {
+  font-size: 0.85714em;
+  background: rgba(3, 3, 3, 0.5);
+}
+.shop-btn.span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-btn:hover,
+.shop-btn:hover {
+  background-color: #171717;
+}
+
+/* Estilos para el texto WORLD SHIPPING */
+.world-shipping {
+  text-align: center;
+  margin-top: 20px; /* Ajusta este valor según sea necesario */
+  font-size: 1.2em; /* Ajusta el tamaño de fuente según sea necesario */
+  color: white; /* Asumiendo que el texto es blanco */
+}
+
+.world-shipping span,
+.world-shipping a {
+  margin-right: 5px;
+  text-decoration: none;
+  color: white; /* Asumiendo que el texto es blanco */
+}
+
+.world-shipping a:hover {
+  text-decoration: underline;
+}
