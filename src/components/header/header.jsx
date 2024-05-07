@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiSearch, FiShoppingBag, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import "./headercss.css";
+import "./Header.css";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 

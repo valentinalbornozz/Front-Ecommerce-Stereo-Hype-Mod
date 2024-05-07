@@ -5,8 +5,9 @@ import {
   Route,
 } from "react-router-dom";
 import Layout from "../components/layout/layout";
-import Header from "../components/header/header";
+
 import Home from "../pages/home";
+import Header from "../components/Header/Header";
 const Routes = () => {
   return (
     <BrowserRouter>

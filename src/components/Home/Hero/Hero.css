@@ -1,12 +1,12 @@
 .slider-container {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 100%;
   overflow: hidden;
 }
 
 .slide {
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
@@ -27,7 +27,7 @@
 
 .slider-controls {
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   left: 2%;
   display: flex;
   align-items: center;

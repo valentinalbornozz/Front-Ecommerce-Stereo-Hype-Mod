@@ -1,20 +1,32 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoIosPlay, IoIosPause } from "react-icons/io";
-import "./HomeSlider.css";
+import "./Hero.css";
 
 const slides = [
-  { url: "/assets/hoodies.webp", label: "NOW IN XXXL", link: "/shop/hoodies" },
   {
-    url: "/assets/MIAMI_TEE_BANNER_1944x.webp",
+    url: "../../../../assets/slider/hoodies.webp",
+    label: "NOW IN XXXL",
+    link: "/shop/hoodies",
+  },
+  {
+    url: "../../../../assets/slider/MIAMI_TEE_BANNER_1944x.webp",
     label: "Miami Tee",
     link: "/shop/miami-tee",
   },
-  { url: "/assets/music.webp", label: "Music", link: "/shop/music" },
-  { url: "/assets/t-shirt.webp", label: "T-Shirt", link: "/shop/t-shirt" },
+  {
+    url: "../../../../assets/slider/slider/music.webp",
+    label: "Music",
+    link: "/shop/music",
+  },
+  {
+    url: "../../../../assets/slider/slider/t-shirt.webp",
+    label: "T-Shirt",
+    link: "/shop/t-shirt",
+  },
 ];
 
-const HomeSlider = () => {
+const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -89,4 +101,4 @@ const HomeSlider = () => {
   );
 };
 
-export default HomeSlider;
+export default Hero;
