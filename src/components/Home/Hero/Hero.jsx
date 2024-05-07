@@ -15,12 +15,12 @@ const slides = [
     link: "/shop/miami-tee",
   },
   {
-    url: "../../../../assets/slider/slider/music.webp",
+    url: "../../../../assets/slider/music.webp",
     label: "Music",
     link: "/shop/music",
   },
   {
-    url: "../../../../assets/slider/slider/t-shirt.webp",
+    url: "../../../../assets/slider/t-shirt.webp",
     label: "T-Shirt",
     link: "/shop/t-shirt",
   },
@@ -62,40 +62,39 @@ const Hero = () => {
   return (
     <div className="slider-container">
       {slides.map((slide, index) => (
-        <a
+        <div
           key={index}
-          className={`slide ${index === currentSlide ? "active" : ""}`}
+          className={`slide ${
+            index === currentSlide ? "slide active" : "slide"
+          }`}
           style={{ display: index === currentSlide ? "block" : "none" }}
         >
           <img src={slide.url} alt={slide.label} className="slide-image" />
-        </a>
-      ))}
-
-      <div className="slider-controls">
-        <div className="slide-indicator">
-          {currentSlide + 1}/{slides.length}
         </div>
+      ))}
+      <div className="controls-container">
+        <div className="slider-controls">
+          <div className="slide-indicator">
+            {currentSlide + 1}/{slides.length}
+          </div>
 
-        <button onClick={pausePlaySlide} className="control-btn">
-          {isPlaying ? <IoIosPause /> : <IoIosPlay />}
-        </button>
-        <button onClick={prevSlide} className="control-btn">
-          <FaChevronLeft />
-        </button>
-        <button onClick={nextSlide} className="control-btn">
-          <FaChevronRight />
-        </button>
-        <button
-          onClick={() => (window.location.href = slides[currentSlide].link)}
-          className="control-btn shop-btn"
-        >
-          {slides[currentSlide].label}
-          <span>→</span>
-        </button>
-      </div>
-      <div className="world-shipping">
-        <span>ESSENTIAL TEE -</span>
-        <a href="/shipping-info">WORLDWIDE SHIPPING→</a>
+          <button onClick={pausePlaySlide} className="control-btn">
+            {isPlaying ? <IoIosPause /> : <IoIosPlay />}
+          </button>
+          <button onClick={prevSlide} className="control-btn">
+            <FaChevronLeft />
+          </button>
+          <button onClick={nextSlide} className="control-btn">
+            <FaChevronRight />
+          </button>
+          <button
+            onClick={() => (window.location.href = slides[currentSlide].link)}
+            className="control-btn shop-btn"
+          >
+            {slides[currentSlide].label}
+            <span>→</span>
+          </button>
+        </div>
       </div>
     </div>
   );

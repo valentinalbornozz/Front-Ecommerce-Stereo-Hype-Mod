@@ -27,7 +27,7 @@
 
 .slider-controls {
   position: absolute;
-  bottom: 25%;
+  bottom: 10%;
   left: 2%;
   display: flex;
   align-items: center;
@@ -73,23 +73,4 @@
 .control-btn:hover,
 .shop-btn:hover {
   background-color: #171717;
-}
-
-/* Estilos para el texto WORLD SHIPPING */
-.world-shipping {
-  text-align: center;
-  margin-top: 20px; /* Ajusta este valor según sea necesario */
-  font-size: 1.2em; /* Ajusta el tamaño de fuente según sea necesario */
-  color: white; /* Asumiendo que el texto es blanco */
-}
-
-.world-shipping span,
-.world-shipping a {
-  margin-right: 5px;
-  text-decoration: none;
-  color: white; /* Asumiendo que el texto es blanco */
-}
-
-.world-shipping a:hover {
-  text-decoration: underline;
 }
