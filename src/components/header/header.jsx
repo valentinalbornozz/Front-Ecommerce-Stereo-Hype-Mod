@@ -16,7 +16,11 @@ const Header = () => {
         <div className="flex items-center justify-center ">
           <div className="flex items-center ">
             <Link to="/">
-              <img src="/logo.png" alt="Logo" className="mr-4" />
+              <img
+                src="../../../assets/logo/SH_Label_Logo_1400x1400_300dpi-White_100x.avif"
+                alt="Logo"
+                className="mr-4"
+              />
             </Link>
             <ul className="hidden md:flex space-x-6">
               <li>

@@ -1,0 +1,79 @@
+/* styles.css */
+.page-width {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 750px) {
+  .page-width {
+    padding: 0 20px;
+  }
+}
+
+.productos {
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.product-image {
+  width: auto; /* Ajusta el ancho de la imagen según sea necesario */
+  max-width: 50%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  justify-content: space-around; /* Distribuye el espacio verticalmente */
+  padding-left: 2rem; /* Espacio a la izquierda del contenido */
+  max-width: 50%; /* Ajusta este valor para cambiar el ancho del contenido */
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-price {
+  color: #666;
+  font-size: 1.25rem;
+}
+
+.product-sizes,
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.product-sizes select,
+.quantity-controls button {
+  margin-right: 0.5rem;
+}
+
+.add-to-cart-button {
+  background-color: #f44336;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.full-details {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+/* Añade estilos adicionales para los botones, selectores y cualquier otro elemento que necesites */
