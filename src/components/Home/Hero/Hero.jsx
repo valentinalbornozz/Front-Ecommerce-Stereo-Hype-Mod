@@ -2,29 +2,7 @@ import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoIosPlay, IoIosPause } from "react-icons/io";
 import "./Hero.css";
-
-const slides = [
-  {
-    url: "../../../../assets/slider/hoodies.webp",
-    label: "NOW IN XXXL",
-    link: "/shop/hoodies",
-  },
-  {
-    url: "../../../../assets/slider/MIAMI_TEE_BANNER_1944x.webp",
-    label: "Miami Tee",
-    link: "/shop/miami-tee",
-  },
-  {
-    url: "../../../../assets/slider/music.webp",
-    label: "Music",
-    link: "/shop/music",
-  },
-  {
-    url: "../../../../assets/slider/t-shirt.webp",
-    label: "T-Shirt",
-    link: "/shop/t-shirt",
-  },
-];
+import slides from "./slides";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -67,7 +45,9 @@ const Hero = () => {
           className={`slide ${
             index === currentSlide ? "slide active" : "slide"
           }`}
-          style={{ display: index === currentSlide ? "block" : "none" }}
+          style={{
+            display: "block", // Ahora todas las diapositivas se renderizarán, pero solo la activa estará visible.
+          }}
         >
           <img src={slide.url} alt={slide.label} className="slide-image" />
         </div>
