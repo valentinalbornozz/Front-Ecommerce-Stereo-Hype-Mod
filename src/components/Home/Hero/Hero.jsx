@@ -46,7 +46,7 @@ const Hero = () => {
             index === currentSlide ? "slide active" : "slide"
           }`}
           style={{
-            display: "block", // Ahora todas las diapositivas se renderizarán, pero solo la activa estará visible.
+            display: "block",
           }}
         >
           <img src={slide.url} alt={slide.label} className="slide-image" />
