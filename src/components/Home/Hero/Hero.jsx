@@ -52,28 +52,54 @@ const Hero = () => {
           <img src={slide.url} alt={slide.label} className="slide-image" />
         </div>
       ))}
-      <div className="controls-container">
-        <div className="slider-controls">
-          <div className="slide-indicator">
-            {currentSlide + 1}/{slides.length}
-          </div>
+      <div className="hero-container">
+        <div className="hero-content hero-content-active">
+          <div className="page-width">
+            <div className="hero-content__title-wrapper">
+              <div className="title-container">
+                <h2
+                  data-slide-id="0"
+                  className={`hero-content__title h1 ${
+                    currentSlide === 0 ? "hero-title-active" : ""
+                  }`}
+                >
+                  HOODIES
+                </h2>
+                <h2
+                  data-slide-id="2"
+                  className={`hero-content__title h1 ${
+                    currentSlide === 2 ? "hero-title-active" : ""
+                  }`}
+                >
+                  NEW MUSIC
+                </h2>
+              </div>
+            </div>
+            <div className="slider-controls">
+              <div className="slide-indicator">
+                {currentSlide + 1}/{slides.length}
+              </div>
 
-          <button onClick={pausePlaySlide} className="control-btn">
-            {isPlaying ? <IoIosPause /> : <IoIosPlay />}
-          </button>
-          <button onClick={prevSlide} className="control-btn">
-            <FaChevronLeft />
-          </button>
-          <button onClick={nextSlide} className="control-btn">
-            <FaChevronRight />
-          </button>
-          <button
-            onClick={() => (window.location.href = slides[currentSlide].link)}
-            className="control-btn shop-btn"
-          >
-            {slides[currentSlide].label}
-            <span>→</span>
-          </button>
+              <button onClick={pausePlaySlide} className="control-btn">
+                {isPlaying ? <IoIosPause /> : <IoIosPlay />}
+              </button>
+              <button onClick={prevSlide} className="control-btn">
+                <FaChevronLeft />
+              </button>
+              <button onClick={nextSlide} className="control-btn">
+                <FaChevronRight />
+              </button>
+              <button
+                onClick={() =>
+                  (window.location.href = slides[currentSlide].link)
+                }
+                className="control-btn shop-btn"
+              >
+                {slides[currentSlide].label}
+                <span>→</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

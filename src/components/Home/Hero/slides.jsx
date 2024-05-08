@@ -4,23 +4,27 @@ import music from "../../../../assets/slider/music.webp";
 import tshirt from "../../../../assets/slider/t-shirt.webp";
 const slides = [
   {
+    id: 1,
     url: hoodies,
     label: "NOW IN XXXL",
     link: "/shop/hoodies",
   },
   {
+    id: 2,
     url: miami,
-    label: "Miami Tee",
+    label: "Miami T-Shirt",
     link: "/shop/miami-tee",
   },
   {
+    id: 3,
     url: music,
-    label: "Music",
+    label: "Tita Lau & Bessey - To L.A ",
     link: "/shop/music",
   },
   {
+    id: 4,
     url: tshirt,
-    label: "T-Shirt",
+    label: "ESSENTIAL TEE",
     link: "/shop/t-shirt",
   },
 ];
