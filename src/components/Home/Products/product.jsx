@@ -28,8 +28,8 @@ const Producto = () => {
     <div id="productos" className="productos page-width">
       <h2 className="title">Productos destacados</h2>
       <div className="product-container">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
+        {products.map((product, index) => (
+          <div key={index} className="product-card">
             <img
               src={product.imageUrl}
               alt={product.name}
@@ -38,13 +38,16 @@ const Producto = () => {
             <div className="product-info">
               <h3 className="product-name">{product.name}</h3>
               <p className="product-price">{product.price}</p>
+              <p>Size</p>
               {product.sizes && product.sizes.length > 0 && (
                 <select className="product-sizes">
-                  {product.sizes.map((size, index) => (
-                    <option key={index}>{size}</option>
+                  {product.sizes.map((size) => (
+                    <option key={size}>{size}</option>
                   ))}
                 </select>
               )}
+              <p>quantity</p>
+
               <div className="quantity-controls">
                 <button
                   className="decrement-button"
