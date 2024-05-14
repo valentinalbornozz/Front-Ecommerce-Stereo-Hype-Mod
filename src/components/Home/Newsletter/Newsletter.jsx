@@ -25,7 +25,7 @@ const NewsletterForm = () => {
           setIsSubmitted(true);
           setTimeout(() => {
             setIsSubmitted(false);
-            setSubmitting(false); // Finalizar el estado de envío
+            setSubmitting(false);
           }, 10000);
           resetForm();
         }}
