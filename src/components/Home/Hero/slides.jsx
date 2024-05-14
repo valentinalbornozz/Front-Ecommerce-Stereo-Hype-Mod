@@ -18,7 +18,7 @@ const slides = [
   {
     id: 3,
     url: music,
-    label: "Tita Lau & Bessey - To L.A ",
+    label: "James Hype - Wild (Matt Sassari Remix) ",
     link: "/shop/music",
   },
   {

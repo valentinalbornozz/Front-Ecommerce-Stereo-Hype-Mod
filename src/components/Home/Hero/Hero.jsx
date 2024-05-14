@@ -65,14 +65,6 @@ const Hero = () => {
                 >
                   HOODIES
                 </h2>
-                <h2
-                  data-slide-id="2"
-                  className={`hero-content__title h1 ${
-                    currentSlide === 2 ? "hero-title-active" : ""
-                  }`}
-                >
-                  NEW MUSIC
-                </h2>
               </div>
             </div>
             <div className="slider-controls">
