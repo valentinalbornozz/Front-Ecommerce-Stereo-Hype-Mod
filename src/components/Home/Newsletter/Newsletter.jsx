@@ -56,7 +56,6 @@ const NewsletterForm = () => {
                   type="submit"
                   className="btn inline-block px-6 py-4 text-white shadow focus:outline-none focus:shadow-outline"
                   disabled={!(isValid && dirty)} // El botón está deshabilitado si el formulario no es válido o no ha sido tocado
-                  style={{ backgroundColor: "red" }}
                 >
                   <FaChevronRight />
                 </button>
