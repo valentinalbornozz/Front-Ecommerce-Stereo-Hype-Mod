@@ -2,6 +2,26 @@
   font-size: 30px;
   margin-top: 10px;
 }
-h5 {
+.font-name {
   font-size: 1.71429em;
+}
+.field-form {
+  background-color: #f4f4f4;
+}
+.btn {
+  background-color: red;
+}
+.btn:hover {
+  background-color: #e50000;
+}
+.icon-follow {
+  font-size: 25px;
+}
+
+.copyright {
+  border-top: 1px solid #101010;
+  padding: 10px 0;
+}
+.copyright-p {
+  font-size: 80%;
 }
