@@ -4,7 +4,7 @@ const InternationalTaxes = () => {
       className="text-center flex  items-center justify-center"
       style={{ padding: "30px" }}
     >
-      <div className="bg-white p-7">
+      <div>
         <h1 className=" font-bold text-black mb-4" style={{ fontSize: "30px" }}>
           INTERNATIONAL TAXES
         </h1>
