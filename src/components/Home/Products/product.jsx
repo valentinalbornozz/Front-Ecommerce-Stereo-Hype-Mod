@@ -31,11 +31,13 @@ const Producto = () => {
         {products.map((product, index) => (
           <div key={index} className="product-card">
             <div className="product-image-container">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="product-image"
-              />
+              <a href="/#">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="product-image"
+                />
+              </a>
             </div>
             <div className="product-info">
               <div className="product-details">
@@ -46,52 +48,61 @@ const Producto = () => {
                 </div>
 
                 <p className="product-price">{product.price}</p>
-                <p>
+                <p className="shipping">
                   <a href="#" className="shipping-link">
                     Shipping
                   </a>{" "}
                   calculated at checkout.
                 </p>
-                <div className="size-quantity-container">
-                  {product.sizes && product.sizes.length > 0 && (
-                    <div className="size-selector">
-                      <label htmlFor={`size-select-${product.id}`}>Size</label>
-                      <select
-                        id={`size-select-${product.id}`}
-                        className="product-sizes"
-                      >
-                        {product.sizes.map((size) => (
-                          <option key={size}>{size}</option>
-                        ))}
-                      </select>
-                    </div>
-                  )}
-                  <div className="quantity-selector">
-                    <label htmlFor={`quantity-select-${product.id}`}>
-                      Quantity
-                    </label>
-                    <div className="quantity-controls">
-                      <button
-                        className="decrement-button"
-                        onClick={() => decrementQuantity(product.id)}
-                      >
-                        -
-                      </button>
-                      <span className="quantity">{quantities[product.id]}</span>
-                      <button
-                        className="increment-button"
-                        onClick={() => incrementQuantity(product.id)}
-                      >
-                        +
-                      </button>
-                    </div>
+              </div>
+              <hr className="hr" />
+              <div className="size-quantity-container">
+                {product.sizes && product.sizes.length > 0 && (
+                  <div className="size-selector">
+                    <label htmlFor={`size-select-${product.id}`}>Size</label>
+                    <select
+                      id={`size-select-${product.id}`}
+                      className="product-sizes"
+                    >
+                      {product.sizes.map((size) => (
+                        <option key={size} className="option">
+                          {size}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                  <button className="add-to-cart-button">ADD TO CART</button>
+                )}
+                <div className="quantity-selector">
+                  <label htmlFor={`quantity-select-${product.id}`}>
+                    Quantity
+                  </label>
+                  <div className="quantity-controls">
+                    <button
+                      className="decrement-button minus"
+                      onClick={() => decrementQuantity(product.id)}
+                    >
+                      -
+                    </button>
+                    <span className="quantity">{quantities[product.id]}</span>
+                    <button
+                      className="increment-button plus"
+                      onClick={() => incrementQuantity(product.id)}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div className="product-form__item product-form__item--submit">
+                  <button className="btn btn--full product-form__cart-submit">
+                    <span> ADD TO CART </span>
+                  </button>
                 </div>
               </div>
-              <a href="#" className="full-details-link">
-                Full Details
-              </a>
+              <div className="full-details">
+                <a href="#" className="full-details-link">
+                  Full Details <span>→</span>
+                </a>
+              </div>
             </div>
           </div>
         ))}
