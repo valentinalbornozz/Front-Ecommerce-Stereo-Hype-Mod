@@ -29,7 +29,10 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 font-semibold">
+                <a
+                  href="collections/apparel"
+                  className="hover:text-gray-300 font-semibold"
+                >
                   APPAREL
                 </a>
               </li>
