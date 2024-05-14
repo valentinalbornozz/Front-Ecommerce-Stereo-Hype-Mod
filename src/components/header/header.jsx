@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
             <ul className="hidden md:flex space-x-6">
               <li>
-                <a href="#" className="hover:text-gray-300 font-semibold">
+                <a href="/" className="hover:text-gray-300 font-semibold">
                   HOME
                 </a>
               </li>
