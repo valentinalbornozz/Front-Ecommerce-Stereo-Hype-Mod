@@ -1,6 +1,7 @@
 import { useState } from "react";
 import products from "./Products";
 import "./Products.css";
+import { TfiPlus, TfiMinus } from "react-icons/tfi";
 
 const initialQuantities = products.reduce((acc, product) => {
   acc[product.id] = 1;
@@ -57,12 +58,12 @@ const Producto = () => {
               </div>
               <hr className="hr" />
               <div className="size-quantity-container">
-                {product.sizes && product.sizes.length > 0 && (
+                {product.sizes && product.sizes.length > 0 ? (
                   <div className="size-selector">
                     <label htmlFor={`size-select-${product.id}`}>Size</label>
                     <select
                       id={`size-select-${product.id}`}
-                      className="product-sizes"
+                      className="size-input product-sizes"
                     >
                       {product.sizes.map((size) => (
                         <option key={size} className="option">
@@ -71,6 +72,8 @@ const Producto = () => {
                       ))}
                     </select>
                   </div>
+                ) : (
+                  <div className="no-size"></div> // Contenedor vacío para mantener el diseño
                 )}
                 <div className="quantity-selector">
                   <label htmlFor={`quantity-select-${product.id}`}>
@@ -81,14 +84,14 @@ const Producto = () => {
                       className="decrement-button minus"
                       onClick={() => decrementQuantity(product.id)}
                     >
-                      -
+                      <TfiMinus />
                     </button>
                     <span className="quantity">{quantities[product.id]}</span>
                     <button
                       className="increment-button plus"
                       onClick={() => incrementQuantity(product.id)}
                     >
-                      +
+                      <TfiPlus />
                     </button>
                   </div>
                 </div>
