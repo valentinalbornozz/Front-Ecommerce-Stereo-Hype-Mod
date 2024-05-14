@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import "./Newsletter.css";
@@ -58,7 +58,7 @@ const NewsletterForm = () => {
                   disabled={!(isValid && dirty)} // El botón está deshabilitado si el formulario no es válido o no ha sido tocado
                   style={{ backgroundColor: "red" }}
                 >
-                  <FaArrowRight />
+                  <FaChevronRight />
                 </button>
               </div>
               {dirty && errors.email && touched.email && (
