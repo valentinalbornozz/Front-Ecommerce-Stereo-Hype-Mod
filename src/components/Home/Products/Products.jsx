@@ -1,9 +1,9 @@
-import miamitshirt from "../../../../assets/Productos/BOX2733-MIAMI-FRONT-WEB3_440x.webp";
-import tshirt from "../../../../assets/Productos/SHNYCBONETSHIRT-FRONT_V2_d964f540-bf56-4e01-84fc-b65f75cd8e3d_440x.webp";
-import hoodie from "../../../../assets/Productos/STEREOHYPEHOODIE2023-FRONT1_440x.webp";
-import flag from "../../../../assets/Productos/SH-YELLOWFLAG_4X5-WEB_440x.webp";
-import socks from "../../../../assets/Productos/SOCK-VERTICALSH-WHITE-WEB_440x.webp";
-import lanyard from "../../../../assets/Productos/LANYARD-FULL-WEB2_440x.webp";
+import miamitshirt from "../../../../assets/Productos/home/BOX2733-MIAMI-FRONT-WEB3_440x.webp";
+import tshirt from "../../../../assets/Productos/home/SHNYCBONETSHIRT-FRONT_V2_d964f540-bf56-4e01-84fc-b65f75cd8e3d_440x.webp";
+import hoodie from "../../../../assets/Productos/home/STEREOHYPEHOODIE2023-FRONT1_440x.webp";
+import flag from "../../../../assets/Productos/home/SH-YELLOWFLAG_4X5-WEB_440x.webp";
+import socks from "../../../../assets/Productos/home/SOCK-VERTICALSH-WHITE-WEB_440x.webp";
+import lanyard from "../../../../assets/Productos/home/LANYARD-FULL-WEB2_440x.webp";
 
 const products = [
   {
