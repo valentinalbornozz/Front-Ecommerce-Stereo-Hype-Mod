@@ -1,4 +1,3 @@
-// src/productos.js
 import OGBlack from "../../../assets/Productos/productos/t-shirt-black-stereo-hype/BLACK-FRONT_FULL_4X5_5_0.5x_480x.webp";
 import OGWhite from "../../../assets/Productos/productos/t-shirt-white-stereo-hype/WHITE-FRONT_FULL_4X5_5_0.5x_1024x1024.webp";
 import Hoodie from "../../../assets/Productos/productos/hoodie-stereo-hype/STEREOHYPEHOODIE2023-FRONT1_480x.webp";
@@ -14,56 +13,56 @@ const products = [
     name: "STEREOHYPE 2022 OG - BLACK",
     imageUrl: OGBlack,
     price: "£35.00",
-    link: "/products/1", // Enlace correspondiente
+    link: "/collections/apparel/products/stereohype-2022-og-black",
   },
   {
     id: 2,
     name: "STEREOHYPE 2022 OG - WHITE",
     imageUrl: OGWhite,
     price: "SOLD OUT",
-    link: "/products/2",
+    link: "/collections/apparel/products/stereohype-2022-og-white",
   },
   {
     id: 3,
     name: "STEREOHYPE OG HOODIE",
     imageUrl: Hoodie,
     price: "£69.00",
-    link: "/products/3",
+    link: "/collections/apparel/products/stereohype-og-hoodie",
   },
   {
     id: 4,
     name: "ESSENTIAL T-SHIRT",
     imageUrl: Essential,
     price: "£28.00",
-    link: "/products/4",
+    link: "/collections/apparel/products/essential-t-shirt",
   },
   {
     id: 5,
     name: "NO SLEEP GANG BLACK T-SHIRT",
     imageUrl: SleepGang,
     price: "SOLD OUT",
-    link: "/products/5",
+    link: "/collections/apparel/products/no-sleep-gang-black-t-shirt",
   },
   {
     id: 6,
     name: "NEW YORK OVERSIZED T-SHIRT",
     imageUrl: NewYork,
     price: "£76.00",
-    link: "/products/6",
+    link: "/collections/apparel/products/new-york-oversized-t-shirt",
   },
   {
     id: 7,
     name: "NEW YORK OVERSIZED T-SHIRT",
     imageUrl: NewYorkBlack,
     price: "SOLD OUT",
-    link: "/products/7",
+    link: "/collections/apparel/products/new-york-black-t-shirt",
   },
   {
     id: 8,
     name: "MIAMI T-SHIRT",
     imageUrl: Miami,
     price: "£39.00",
-    link: "/products/8",
+    link: "/collections/apparel/products/miami-t-shirt",
   },
 ];
 

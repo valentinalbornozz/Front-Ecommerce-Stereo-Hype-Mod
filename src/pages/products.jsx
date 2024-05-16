@@ -1,9 +1,9 @@
-import ProductsGrid from "../components/Products/ProductGrid";
+import ApparelPage from "../components/apparel/ProductGrid";
 
 const Products = () => {
   return (
     <>
-      <ProductsGrid />
+      <ApparelPage />
     </>
   );
 };
