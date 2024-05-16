@@ -30,7 +30,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="collections/apparel"
+                  href="/collections/apparel"
                   className="hover:text-gray-300 font-semibold"
                 >
                   APPAREL
