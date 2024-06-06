@@ -1,29 +1,65 @@
 import { useState } from "react";
 import products from "./ApparelData";
-import SortComponent from "../ShortBy/SortBy";
+import SortComponent from "../SortBy/SortBy";
 import FilterComponent from "../Filter/FilterComponent";
 
 const ApparelPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
 
   const handleFilterChange = (filter) => {
-    if (filter === "Hoodies") {
-      const filtered = products.filter(
-        (product) => product.category === "Hoodies"
-      );
-      setFilteredProducts(filtered);
-    } else {
-      setFilteredProducts(products);
-    }
+    const filtered = products.filter(
+      (product) =>
+        filter === "all" ||
+        (Array.isArray(product.category)
+          ? product.category.includes(filter)
+          : product.category === filter)
+    );
+    setFilteredProducts(filtered);
+  };
+  const parsePrice = (price) => {
+    return parseFloat(price.replace(/[^0-9.-]+/g, ""));
   };
 
   const handleSortChange = (sortMethod) => {
-    if (sortMethod === "priceLowHigh") {
-      const sorted = [...products].sort((a, b) => a.price - b.price);
-      setFilteredProducts(sorted);
+    let sorted = [...filteredProducts];
+    switch (sortMethod) {
+      case "featured":
+        sorted = [...filteredProducts].sort((a, b) =>
+          a.featured === b.featured ? 0 : a.featured ? -1 : 1
+        );
+        break;
+      case "bestSelling":
+        // Assuming you have a 'sold' property indicating how many units have been sold
+        sorted.sort((a, b) => b.sold - a.sold);
+        break;
+      case "alphaAsc":
+        sorted.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case "alphaDesc":
+        sorted.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case "priceLowHigh":
+        sorted = sorted
+          .filter((p) => p.price !== "SOLD OUT")
+          .sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+        break;
+      case "priceHighLow":
+        sorted = sorted
+          .filter((p) => p.price !== "SOLD OUT")
+          .sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+        break;
+      case "dateNewOld":
+        sorted.sort((a, b) => new Date(a.dateAdded) - new Date(b.dateAdded));
+        break;
+      case "dateOldNew":
+        sorted.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+        break;
+      default:
+        // No sorting or a default sorting method
+        break;
     }
+    setFilteredProducts(sorted);
   };
-
   return (
     <div className="flex flex-col p-4">
       <div className="flex flex-col md:flex-row justify-between items-center w-full p-4">

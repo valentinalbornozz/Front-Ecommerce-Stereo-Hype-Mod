@@ -14,6 +14,7 @@ const products = [
     imageUrl: OGBlack,
     price: "£35.00",
     link: "/collections/apparel/products/stereohype-2022-og-black",
+    category: "t-shirts",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const products = [
     imageUrl: OGWhite,
     price: "SOLD OUT",
     link: "/collections/apparel/products/stereohype-2022-og-white",
+    category: "t-shirts",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const products = [
     imageUrl: Hoodie,
     price: "£69.00",
     link: "/collections/apparel/products/stereohype-og-hoodie",
+    category: "hoodies",
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const products = [
     imageUrl: Essential,
     price: "£28.00",
     link: "/collections/apparel/products/essential-t-shirt",
+    category: ["t-shirts", "essentials"],
   },
   {
     id: 5,
@@ -42,6 +46,7 @@ const products = [
     imageUrl: SleepGang,
     price: "SOLD OUT",
     link: "/collections/apparel/products/no-sleep-gang-black-t-shirt",
+    category: ["t-shirts", "no sleep gang"],
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ const products = [
     imageUrl: NewYork,
     price: "£76.00",
     link: "/collections/apparel/products/new-york-oversized-t-shirt",
+    category: ["t-shirts", "new york"],
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ const products = [
     imageUrl: NewYorkBlack,
     price: "SOLD OUT",
     link: "/collections/apparel/products/new-york-black-t-shirt",
+    category: ["t-shirts", "new york"],
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ const products = [
     imageUrl: Miami,
     price: "£39.00",
     link: "/collections/apparel/products/miami-t-shirt",
+    category: ["t-shirts", "miami"],
   },
 ];
 

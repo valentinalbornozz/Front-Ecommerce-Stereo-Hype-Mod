@@ -10,10 +10,6 @@ const FilterComponent = ({ onFilterChange }) => {
     { value: "miami", label: "Miami" },
     { value: "new york", label: "New York" },
     { value: "no sleep gang", label: "NO SLEEP GANG" },
-    { value: "spo-cs-disabled", label: "spo-cs-disabled" },
-    { value: "spo-default", label: "spo-default" },
-    { value: "spo-enabled", label: "spo-enabled" },
-    { value: "spo-notify-me-disabled", label: "spo-notify-me-disabled" },
     { value: "t-shirts", label: "T-shirts" },
   ];
 
